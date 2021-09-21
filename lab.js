@@ -140,7 +140,7 @@ if (score >= 90) {
 
 
 // Not exactly sure what it is asking. I am going to make it so that it infinitely switches between true and false.
-
+let changeMyMind = true
   changeMyMind = false ? changeMyMind = true : changeMyMind = true 
   console.log(changeMyMind)
 
@@ -151,7 +151,7 @@ if (score >= 90) {
 
 
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
-changeMyMind = true
+changeMyMind !== false
 console.log(changeMyMind)
 //CODE HERE
 
@@ -232,12 +232,34 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
+switch (letterGrade) {
+  case 'A':
+    console.log(`The student is doing excellently.`)
+    break;
+  case 'B': 
+    console.log(`The student is doing well.`)
+    break;
+  case 'C':
+    console.log(`The student is doing alright.`)
+    break;
+  case 'D':
+    console.log(`The student is not doing very well.`)
+    break;
+  case 'F':
+    console.log(`The student is failing.`)
+    break;
+  default :
+  console.log(`Not an eligible grade.`)
+}
 
 
 ////////// PROBLEM 14 //////////
 /* The famous FizzBuzz, Devmountain style!
-  Create a for loop that iterates from 1 to 100. In this for loop, using some conditional logic, if the number your for loop is currently on is divisible by 3, console.log 'Dev'. If the number is divisible by 5, console.log 'mountain'. If the number is divisible by 5 & 3, console.log 'Devmountain'. If the number is not divisible by 5 or 3, console.log the number itself. Hint: Look up the modulo operator.
+  Create a for loop that iterates from 1 to 100. 
+  In this for loop, using some conditional logic, if the number your for loop is currently on is divisible by 3, console.log 'Dev'. 
+  If the number is divisible by 5, console.log 'mountain'.
+  If the number is divisible by 5 & 3, console.log 'Devmountain'. 
+  If the number is not divisible by 5 or 3, console.log the number itself. Hint: Look up the modulo operator.
 
   Your output should look like:
   1
@@ -260,3 +282,15 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+for(fizz = 1; fizz < 100; fizz++) {
+  if (fizz % 3 === 0 && fizz % 5 === 0) {
+    console.log(`Devmountain`)
+  }  else if (fizz % 3 === 0) {
+    console.log(`Dev`)
+  } else if (fizz % 5 === 0) {
+    console.log(`mountain`)
+  } else if(!fizz % 3 === 0 && !fizz % 5 === 0 ) {
+  console.log(fizz)
+}
+}
